@@ -1,9 +1,6 @@
 - hosts: all
-  gather_facts: yes
- 
+  gather_facts: no
   tasks:
-  - name: Check the date on the server.
-    command: date
   - name: Check the eth0 ip on the server.
-    command: ifconfig -a
+    command: {{ run_cmd }}
     become_flags: '-'
