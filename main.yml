@@ -2,5 +2,5 @@
   gather_facts: no
   tasks:
   - name: Check the eth0 ip on the server.
-    command: {{ run_cmd }}
+    command: "{{ run_cmd }}"
     become_flags: '-'
